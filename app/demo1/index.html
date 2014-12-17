@@ -13,7 +13,7 @@
   <script src="./js/app.js"></script>
 </head>
 
-<body ng-controller="Ctrl">
+<body ng-controller="Ctrl" ng-init="init()">
   <!--   <nav class="navbar navbar-default ">
     <div class="container">
       <a href="#" class="navbar-brand">
@@ -30,13 +30,13 @@
   <!-- 倒计时包裹 -->
   <section class="main-area">
     <!-- 倒计时主体 -->
-    <div class="container">
+    <div class="wrapper">
       <h1 class="main-title">
         Coming Soon
       </h1>
       <count-down target-date="targetDate"></count-down>
 
-      <input type="date" class="target-date" ng-model="targetDate" ng-change="targetDateChanged()">
+      <input type="date" class="form-control target-date" ng-model="targetDate" ng-change="targetDateChanged()">
     </div>
   </section>
 

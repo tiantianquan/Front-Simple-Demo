@@ -4665,13 +4665,21 @@ body, html {
   position: relative;
   background-color: #d3d9de;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  min-height: 900px; }
 
 .main-title {
-  margin-top: 18%;
   text-align: center;
   color: #fff;
-  font-size: 150px; }
+  font-size: 150px;
+  margin-top: 200px; }
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 960px; }
 
 .count-down {
   margin-top: 150px;
@@ -4691,3 +4699,9 @@ body, html {
 
 .count-note {
   font-size: 16px; }
+
+.target-date {
+  margin: 0 auto;
+  margin-top: 100px;
+  display: block;
+  width: 200px; }

@@ -36,15 +36,21 @@ body, html {
   position: relative;
   background-color: $main-bgc;
   width: 100%;
-  height: 100%
+  height: 100%;
+  min-height:900px; 
 }
 //标题
 .main-title {
-  // @include center2;
-  margin-top: 18%;
   text-align: center;
   color: #fff;
   font-size: 150px;
+  margin-top: 200px;
+}
+
+.wrapper{
+  @include center2;
+  min-width: 960px;
+  // max-height: 100%;
 }
 
 //倒计时--------------------------------------------
@@ -68,5 +74,12 @@ body, html {
 }
 .count-note{
   font-size: 16px;
+}
+
+.target-date{
+  margin: 0 auto;
+  margin-top: 100px;
+  display: block;
+  width: 200px;
 }
 //------------------------------------------------
