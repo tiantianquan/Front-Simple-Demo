@@ -55,13 +55,18 @@ body, html {
 
 //倒计时--------------------------------------------
 .count-down {
-  margin-top: 150px;
+  position: relative;
+  margin-top: 200px;
   text-align: center;
 
   .time {
     width: 150px;
     display: inline-block;
     padding:0 20px 0;
+  }
+
+  .time+.time{
+    margin-left: -4px
   }
 }
 .count-number,.count-note{
@@ -70,9 +75,11 @@ body, html {
   color: #666;
 }
 .count-number{
-  font-size: 80px;
+  font-size: 20px;
+  line-height: 1em;
 }
 .count-note{
+  margin-top: 30px;
   font-size: 16px;
 }
 
@@ -81,5 +88,11 @@ body, html {
   margin-top: 100px;
   display: block;
   width: 200px;
+}
+
+//canvas
+#count-down-canvas{
+  @include center2;
+  z-index:-1;
 }
 //------------------------------------------------
