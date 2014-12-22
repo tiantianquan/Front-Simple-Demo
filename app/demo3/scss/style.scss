@@ -1,0 +1,50 @@
+@import"bourbon";
+// @import"neat";
+// @import"bootstrap";
+// @import"font-awesome";
+// @import url(http://fonts.googleapis.com/css?family=Raleway:500,600,700,100,800,900,400,200,300);
+@mixin center {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+@mixin center2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+$main-bgc: hsla(210, 0%, 100%, 1);
+* {
+  margin: 0;
+}
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #eee
+}
+//与视窗等大
+.main-area {
+  position: relative;
+  background-color: $main-bgc;
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+}
+div.cup {
+  @include center;
+  width: 80px;
+  height: 150px;
+  background-image: -webkit-linear-gradient(0deg, hsla(200,50%,80%,1), hsla(0,0%,100%,0) 40%),
+  -webkit-linear-gradient(0deg, hsla(200,50%,80%,1), hsla(0,0%,100%,0) 80%);
+  border: 1px solid hsla(200,50%,80%,1);
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  // box-shadow: inset 60px 0 2px rgba(0, 0, 0, .05), 
+  // inset 30px 0 2px rgba(0, 0, 0, .05),
+  // inset 5px 0 2px rgba(0, 0, 0, .05);
+}
