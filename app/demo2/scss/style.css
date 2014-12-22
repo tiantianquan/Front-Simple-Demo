@@ -4656,11 +4656,6 @@ body, html {
   height: 100%;
   background-color: #eee; }
 
-.navbar {
-  border-radius: 0;
-  margin: 0;
-  border: none; }
-
 .main-area {
   position: relative;
   background-color: #d3d9de;
@@ -4668,60 +4663,21 @@ body, html {
   height: 100%;
   min-height: 700px; }
 
-.main-title {
-  text-align: center;
-  color: #fff;
-  font-size: 150px;
-  height: 100px; }
-
 .wrapper {
+  height: 300px;
+  width: 700px; }
+
+.slide-box {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative; }
+
+.slide-item {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  min-width: 960px; }
-
-.count-down {
-  position: relative;
-  margin-top: 200px;
-  text-align: center; }
-  .count-down .time {
-    width: 150px;
-    display: inline-block;
-    padding: 0 20px 0; }
-  .count-down .time + .time {
-    margin-left: -4px; }
-
-.count-number, .count-note {
-  display: block;
   text-align: center;
-  color: #666; }
-
-.count-number {
-  font-size: 20px;
-  line-height: 1em; }
-
-.count-note {
-  margin-top: 10px;
-  font-size: 16px; }
-
-.target-date {
-  margin: 0 auto;
-  margin-top: 100px;
   display: block;
-  width: 200px; }
-
-#count-down-canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: -1; }
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1); }

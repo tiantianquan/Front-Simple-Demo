@@ -2,7 +2,7 @@ angular.module('demo-app', [])
 
 .controller('Ctrl', function($scope) {
   $scope.init = function() {
-    $scope.targetDate = new Date('2014-12-18 23:29:00')
+    $scope.targetDate = new Date('2014-12-20 23:29:00')
 
     $scope.targetDateChanged = function() {
       $scope.$broadcast('countDown.targetDateChanged')
@@ -15,7 +15,8 @@ angular.module('demo-app', [])
     restrict: 'E',
     scope: {
       targetDate: '=',
-      animationName: '@'
+      animationName: '@',
+      circleRadii:'='
     },
     templateUrl: 'js/count-down.template.html',
     link: function(scope, element, attr) {
@@ -41,14 +42,11 @@ angular.module('demo-app', [])
         time = Math.round((scope.targetDate - Date.now()) / 1000)
         if (time > 0) {
           scope.countTime = Util.convertTime(time)
-            // arcUnit.update(scope.countTime)
 
           inter = $interval(function() {
             if (time > 0) {
               time--
               scope.countTime = Util.convertTime(time)
-                //update动画 
-                // arcUnit.update(scope.countTime)
             } else {
               $interval.cancel(inter)
             }
@@ -61,8 +59,6 @@ angular.module('demo-app', [])
             minutes: 0,
             seconds: 0
           }
-
-          // arcUnit.update(scope.countTime)
         }
       }
 
@@ -76,7 +72,7 @@ angular.module('demo-app', [])
         var timeH = element[0].querySelector('.time').offsetHeight
         var cw = c.width = element[0].querySelector('.count-down').offsetWidth
           // var ch = c.height = element[0].querySelector('.count-down').offsetHeight * 2
-        var radii = 60
+        var radii = scope.circleRadii || 60
         var lineWidth = 4
         var ch = c.height = (radii+lineWidth) * 2 
         Util.hackHighDpi(c, ctx)
@@ -95,7 +91,7 @@ angular.module('demo-app', [])
           var dataRange
           switch (i) {
             case 'days':
-              dataRange = 365
+              dataRange = 1
               break
             case 'hours':
               dataRange = 24

@@ -14,30 +14,22 @@
 </head>
 
 <body ng-controller="Ctrl" ng-init="init()">
-  <!--   <nav class="navbar navbar-default ">
-    <div class="container">
-      <a href="#" class="navbar-brand">
-        Logo
-      </a>
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#"></a>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
-
-  <!-- 倒计时包裹 -->
   <section class="main-area">
-    <!-- 倒计时主体 -->
     <div class="wrapper">
-      <h1 class="main-title">
-        Coming Soon
-      </h1>
-      <count-down target-date="targetDate" animation-name="CountDownCircle" ></count-down>
-
-      <input type="date" class="form-control target-date" ng-model="targetDate" ng-change="targetDateChanged()">
+      <slide-box>
+        <slide-item><span>1</span>
+        </slide-item>
+        <slide-item><span>2</span>
+        </slide-item>
+<!--         <slide-item><span>3</span>
+        </slide-item>
+        <slide-item><span>4</span>
+        </slide-item> -->
+      </slide-box>
     </div>
+
+    <div show-length>{{ text }}</div>
+    <button ng-click="text='xx'">改变</button>
   </section>
 
 </body>
